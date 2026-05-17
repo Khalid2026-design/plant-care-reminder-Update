@@ -1,0 +1,122 @@
+/* ===== REMINDER PAGE ===== */
+.reminder-page{
+    padding: 40px 30px;
+}
+
+.reminder-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reminder-item{
+    background: var(--card-bg);
+    padding: 20px 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s;
+    border-right: 5px solid var(--light-green);
+}
+
+.reminder-item:hover{
+    transform: translateX(-5px);
+}
+
+.reminder-item.today{
+    border-right-color: var(--warning);
+    background: #fffde7;
+}
+
+.reminder-item.overdue{
+    border-right-color: var(--danger);
+    background: #fff5f5;
+}
+
+.reminder-item.upcoming{
+    border-right-color: var(--success);
+}
+
+.r-info h3{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.r-info p{
+    font-size: 0.9rem;
+    color: rgba(6,42,6,0.6);
+}
+
+.r-status{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.r-badge{
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.r-badge.upcoming{
+    background: var(--light-green);
+    color: var(--success);
+}
+
+.r-badge.today{
+    background: #fff9c4;
+    color: #f57f17;
+}
+
+.r-badge.overdue{
+    background: #ffcdd2;
+    color: var(--danger);
+}
+
+/* ===== NOTIFICATION BOX ===== */
+.notification-box{
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 20px 25px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-box.alert-warning{
+    background: #fff8e1;
+    border: 2px solid var(--warning);
+}
+
+.notification-box.alert-danger{
+    background: #ffebee;
+    border: 2px solid var(--danger);
+}
+
+.notification-box .n-icon{
+    font-size: 2rem;
+}
+
+.notification-box p{
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+    .reminder-page{
+        padding: 20px 15px;
+    }
+
+    .reminder-item{
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}

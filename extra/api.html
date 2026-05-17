@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Weather App</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e8f1ff;
+    font-family:Arial;
+}
+
+.weather-card{
+    width:320px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.weather-card h1{
+    color:#222;
+    margin-bottom:10px;
+}
+
+.weather-card h2{
+    color:#0077ff;
+    font-size:35px;
+    margin:10px 0;
+}
+
+.weather-card p{
+    color:#666;
+    font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="weather-card">
+
+    <h1 id="city"></h1>
+
+    <h2 id="result"></h2>
+
+    <p id="description"></p>
+
+</div>
+
+<script>
+
+async function getWeather(){
+
+let apiKey = "b7e28fd68cf24796c19d826dc1311dbf";
+
+let url =
+"https://api.openweathermap.org/data/2.5/weather?q=Kandahar&appid=" + apiKey + "&units=metric";
+
+try{
+
+let response = await fetch(url);
+
+let data = await response.json();
+
+let condition = data.weather[0].main;
+
+let description = data.weather[0].description;
+
+let temp = data.main.temp;
+
+let city = data.name;
+
+let message = "";
+
+if(condition == "Clear"){
+    message = "☀️ Clear";
+}
+else if(condition == "Clouds"){
+    message = "☁️ Clouds";
+}
+else if(condition == "Rain"){
+    message = "🌧 Rain";
+}
+else{
+    message = "🌤 " + condition;
+}
+
+document.getElementById("city").innerHTML = city;
+
+document.getElementById("result").innerHTML =
+message + " " + temp + "°C";
+
+document.getElementById("description").innerHTML =
+description;
+
+}
+
+catch(error){
+
+console.log(error);
+
+document.getElementById("result").innerHTML =
+"Weather Not Loading";
+
+}
+
+}
+
+getWeather();
+
+</script>
+
+</body>
+</html>

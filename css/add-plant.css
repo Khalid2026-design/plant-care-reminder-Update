@@ -1,0 +1,96 @@
+
+.add-plant-page{
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container{
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-container h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.form-group{
+    margin-bottom: 22px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--light-green);
+    border-radius: 12px;
+    font-size: 1rem;
+    direction: rtl;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #fafff5;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(6,42,6,0.1);
+}
+
+.form-group input::placeholder{
+    color: rgba(6,42,6,0.4);
+}
+
+.form-submit{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-submit button{
+    padding: 14px 50px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.form-submit button:hover{
+    background: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(6,42,6,0.3);
+}
+
+ 
+@media (max-width: 768px){
+    .add-plant-page{
+        padding: 20px 15px;
+    }
+
+    .form-container{
+        padding: 25px 20px;
+    }
+}
+
+video{
+    width: 500px;
+    
+}

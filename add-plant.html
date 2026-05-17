@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/add-plant.css">
+    <title>د بوټو پالنه 🌱 | بوټی اضافه کړئ</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><h1><a href="#we"> <span  class="tempp"></span></a> د بوټو پالنه</h1></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="nav-links">
+            <li><a href="index.html">کور پاڼه</a></li>
+            <li><a href="plants.html">نباتات</a></li>
+            <li><a href="add-plant.html" class="active">بوټی اضافه کړئ</a></li>
+            <li><a href="reminder.html">یادونې</a></li>
+            <li><a href="reports.html">راپورونه</a></li>
+            <li><a href="contact.html">اړیکه</a></li>
+            <li><a href="./login.html" class="loginb">لوګین</a></li>
+        </ul>
+        <div class="nav-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">👤</span>
+
+        </div>
+    </nav>
+
+    <section class="add-plant-page">
+        <div class="form-container">
+            <h2>➕ نوی بوټی اضافه کړئ</h2>
+            <form>
+                <div class="form-group">
+                     <div class="container">
+        <video id="video" src="" autoplay></video>
+    </div>
+
+                    <label for="">عکس دا خل کړی</label>
+                    <input placeholder="عکس دا خل کړی" class="plantimage" type="image" src="" alt="">
+                    
+                    <label for=""><button class="ub">له ګالرۍ څخه </button></label>
+                    <input type="file" accept=".jpg">
+                    <button class="ub" onclick="camra()">له کمری څخه</button>
+                </div>
+
+                <div class="form-group">
+                    <label>د بوټي نوم</label>
+                    <input type="text" placeholder="لکه: مونسټیرا، ګلاب..."  required
+                        minlength="3"
+                        maxlength="30">
+                </div>
+                <div class="form-group">
+                    <label>د بوټي ډول</label>
+                    <select>
+                        <option value="">ډول انتخاب کړئ</option>
+                        <option>کورنی نبات</option>
+                        <option>د باغ نبات</option>
+                        <option>استوایي</option>
+                        <option>صحرایي</option>
+                        <option>د ګل نبات</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>وروستی ځل اوبه ورکول</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>د اوبو ورکولو مهال ویش</label>
+                    <select>
+                        <option value="">مهال ویش انتخاب کړئ</option>
+                        <option>هره ورځ</option>
+                        <option>هره دوه ورځې</option>
+                        <option>هره دریمه ورځ</option>
+                        <option>هره اونۍ</option>
+                        <option>هره دوه اونۍ</option>
+                    </select>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">خوندي کړئ 💾</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+     <footer>
+        <h2>د بوټو پالنه 🌿</h2>
+        <ul>
+            
+            <li><a href="mailto:khalid@example.com?subject=Hello Khalid"><img src="./iconn/emil copy.png"  alt=""></a></li>
+            <li><a href="https://www.facebook.com/khalid.khalid.afghan.2025"><img src="./iconn/icons8-facebook-50.png" class="links" alt=""></a></li>
+            <li><a href="https://wa.me/qr/LKYP5WSPYEVKE1"><img src="./iconn/icons8-whatsapp-50.png" class="links" alt=""></a></li>
+            <li><a href=" https://github.com/Khalid2026-design"><img src="./iconn/icons8-linkedin-50.png" class="links" alt=""></a></li>
+        </ul>
+        <h5>د بوټو پالنی ویب پاڼی ټول حقوق خوندی دی 5</h5>
+    </footer>
+<script src="./js/addplnat.js"></script>
+<script src="./js/weather.js"></script>
+</body>
+</html>
